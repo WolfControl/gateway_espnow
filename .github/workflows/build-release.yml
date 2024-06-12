@@ -1,8 +1,9 @@
 name: Build and Release Firmware
 
 on:
-  repository_dispatch:
-    types: [build-release]
+  push:
+    branches:
+      - main
 
 jobs:
   build:
