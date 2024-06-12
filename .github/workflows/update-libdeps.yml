@@ -63,10 +63,3 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Dispatch release workflow
-        uses: peter-evans/repository-dispatch@v3
-        with:
-          token: ${{ secrets.CICD_KEY }}
-          repository: WolfControl/gateway_espnow
-          event-type: 'build-release'
-

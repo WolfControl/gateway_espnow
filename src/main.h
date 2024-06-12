@@ -24,7 +24,7 @@ const int rxPin = 2;
 
 char *deviceId;
 
-char* firmwareVersionEspNow = "0.0.1";
+char* firmwareVersionEspNow = "SETDURINGCOMPILATION";
 char* espnowmac;
 
 rgb_led_t bootLED = {
