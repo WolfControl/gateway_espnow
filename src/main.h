@@ -17,6 +17,14 @@ esp_now_peer_info_t broadcastPeer;
 TaskHandle_t receiveSerialTaskHandle, receiveESPNowTaskHandle, sendESPNowTaskHandle, sendSerialTaskHandle, serialDaemonTaskHandle;
 QueueHandle_t incomingESPNowQueue, outgoingESPNowQueue, incomingSerialQueue, outgoingSerialQueue;
 
+// ---------- provisioning.h ---------- //
+
+TaskHandle_t otaReceiveSerialTaskHandle;
+esp_ota_handle_t ota_handle;
+SemaphoreHandle_t mutex;
+EventGroupHandle_t bridge_event_group;
+
+
 const int txPin = 1;
 const int rxPin = 2;
 
