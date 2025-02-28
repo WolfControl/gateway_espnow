@@ -23,6 +23,7 @@ TaskHandle_t otaReceiveSerialTaskHandle;
 esp_ota_handle_t ota_handle;
 SemaphoreHandle_t mutex;
 EventGroupHandle_t bridge_event_group;
+EventGroupHandle_t ota_event_group;
 
 
 const int txPin = 1;
@@ -34,6 +35,11 @@ char *deviceId;
 
 char* firmwareVersionEspNow = "SETDURINGCOMPILATION";
 char* espnowmac;
+
+esp_partition_t *update_partition = NULL;
+
+// ---------- led.h ---------- //
+
 
 rgb_led_t bootLED = {
     LEDC_CHANNEL_0,
