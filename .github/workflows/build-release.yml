@@ -38,7 +38,7 @@ jobs:
 
       - name: Update Firmware Version in Header File
         run: |
-          sed -i 's/char \*firmwareVersionEspNow = "[^"]*"/char \*firmwareVersionEspNow = "${{ steps.create_version.outputs.version }}"/' src/main.h
+          sed -i "s|char \*firmwareVersionEspNow = \"[^\"]*\"|char \*firmwareVersionEspNow = \"${{ steps.create_version.outputs.version }}\"|" src/main.h
 
       - name: Verify version update
         run: |
