@@ -33,7 +33,7 @@ const int rxPin = 2;
 
 char *deviceId;
 
-char* firmwareVersionEspNow = "SETDURINGCOMPILATION";
+char* firmwareVersionEspNow = "0.0.0";
 char* espnowmac;
 
 esp_partition_t *update_partition = NULL;
